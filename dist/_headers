@@ -1,0 +1,11 @@
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/Build/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/Build/*.wasm
+  Content-Type: application/wasm
+
+/Build/*.data
+  Content-Type: application/octet-stream
