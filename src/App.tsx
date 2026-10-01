@@ -1,22 +1,21 @@
 import './App.css';
-import { Link, Navigate, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { SiteHeader } from './components/SiteHeader';
+import { BlogPage } from './pages/BlogPage';
 import { LandingPage } from './pages/LandingPage';
 import { PlayPage } from './pages/PlayPage';
 
 const App = () => {
   return (
     <>
-      <header className="site-header">
-        <Link className="brand-link" to="/">
-          DA Games
-        </Link>
-        <nav className="top-nav">
-          <Link to="/">Главная</Link>
-          <Link to="/play">Играть</Link>
-        </nav>
-      </header>
+      <Helmet>
+        <html lang="ru" />
+      </Helmet>
+      <SiteHeader />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/blog" element={<BlogPage />} />
         <Route path="/play" element={<PlayPage />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
