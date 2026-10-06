@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "rsbuild build && node scripts/spa-fallback.mjs",
     "dev": "rsbuild",
     "preview": "rsbuild preview"
   },

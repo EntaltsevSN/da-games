@@ -12,7 +12,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'zapusk-sajta-i-bloga',
-    date: '2026-10-02',
+    date: '2026-10-05',
     title: 'Мы начинаем',
     tags: ['сайт', 'игра'],
     paragraphs: [
